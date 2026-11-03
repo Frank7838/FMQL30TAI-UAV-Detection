@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-23T15:34:33.430543+08:00",
+  "SHA256": "8609a326fe8533350c5a8e88529c5ee5e29e5a741052853f292598f773699452",
+  "declaration": "Human model-blind review returned by user; consistency checks passed, not an independent reannotation of pixel content by agent",
+  "complete_ordered_frames": 72,
+  "counts": {
+    "BOX": 49,
+    "NEGATIVE": 21,
+    "UNKNOWN": 1,
+    "PARTIAL": 1
+  },
+  "GT_boxes_on_complete_frames": 49,
+  "known_annotated_frames": 70,
+  "unknown_or_partial_frames": 2,
+  "related_capture_groups": 2,
+  "model_forwards": 0,
+  "test_or_source_admitted": false,
+  "annotation_origin": "AI-assisted drafts corrected/reviewed by named human, not independent from drafts"
+}

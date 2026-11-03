@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "result": {
+    "hardware_observability": {
+      "supported": true,
+      "ready": true,
+      "clock_hz": 100000000,
+      "now_cycles": 770566342095,
+      "event_seq": 116,
+      "valid_mask": 15,
+      "last_mask": 2,
+      "events": {
+        "alarm_assert": {
+          "cycles": 770404390974,
+          "frame": 110025
+        },
+        "alarm_clear": {
+          "cycles": 770431067113,
+          "frame": 110033
+        },
+        "stream_fault": {
+          "cycles": 38749399999,
+          "frame": 2671
+        },
+        "stream_recover": {
+          "cycles": 410693079187,
+          "frame": 2675
+        }
+      },
+      "epoch": "hardware business_reset; not UTC",
+      "record_scope": "latest occurrence per type; not a complete event log"
+    },
+    "media": {
+      "submitted": 107396,
+      "preview_overwritten": 83068,
+      "preview_written": 24328,
+      "record_requested": 107396,
+      "record_not_due": 3423,
+      "record_eligible": 1200,
+      "record_enqueued": 1200,
+      "record_queue_dropped": 0,
+      "record_limit_reached": 102773,
+      "record_written": 1200,
+      "record_encode_ns": 67271970370,
+      "preview_publish_ns": 1111419628260,
+      "elapsed_s": 3598.7303070999997,
+      "preview_publish_fps": 6.760162036038892,
+      "recorded_frames_per_wall_s": 0.3334509389693633,
+      "preview_latest_capacity": 1,
+      "record_queue_capacity": 2,
+      "record_target_hz": 10.0,
+      "nominal_fps": 10,
+      "variable_frame_timestamps": true,
+      "record_policy": "source-time sampling; intentional not_due separate from overload drop",
+      "video_time": "VFR source timestamps; final sample duration100ms; video_map records actual encoded PTS"
+    },
+    "input_verification_mode": "full",
+    "input_hash_samples": 107396,
+    "input_hash_skipped": 0,
+    "completed": true,
+    "stopped": false,
+    "mode": "camera",
+    "frames": 107396,
+    "NPU_calls": 107396,
+    "commits": 107396,
+    "unknown": 0,
+    "loop_seconds": 3600.12243175,
+    "processing_fps": 29.831207698065807,
+    "initial_PL": {
+      "192": 2768568321,
+      "32": 6,
+      "36": 2671,
+      "40": 2667,
+      "44": 0,
+      "48": 0,
+      "52": 4
+    },
+    "final_PL": {
+      "192": 2768568321,
+      "32": 1540,
+      "36": 110070,
+      "40": 110063,
+      "44": 0,
+      "48": 0,
+      "52": 0
+    },
+    "explicit_business_reset_writes": 0,
+    "SDK_device_reset_per_forward": true,
+    "business_write_calls": 229942,
+    "NPU_child_exit": 0,
+    "video_frames": 1200,
+    "source_received_frames": 107872,
+    "capture_gap_test": false,
+    "independent_accuracy": false,
+    "physical_LED_verified": false,
+    "camera_first_frame_wait_s": 1.3494007999997848,
+    "service_rate_cap_hz": 0,
+    "capture_requested_fps": 30,
+    "device_closed": true,
+    "boot": "5b448143-c433-457f-8cb2-cde4e3e31e14"
+  },
+  "boot": "5b448143-c433-457f-8cb2-cde4e3e31e14",
+  "active": {
+    "session": "camera_20260313_043622_780317_b5b448143c433457f8cb2cde4e3e31e14",
+    "boot": "5b448143-c433-457f-8cb2-cde4e3e31e14",
+    "model": "11",
+    "camera_device": "/dev/video4",
+    "seconds": 3600,
+    "max_forwards": 120000,
+    "continuous": false,
+    "capture_fps": 30,
+    "service_rate_hz": 0
+  },
+  "retained_rows": 5760,
+  "retained_valid_rows": 5760,
+  "retained_CPU_FPGA_exact": true,
+  "whole_run_consistency": "worker strict per-commit comparison and fail-fast behavior; rolling logs retain tail only",
+  "SDK_closed": true,
+  "device_lock_released": true,
+  "continuous_autostart_restored": true,
+  "detector_stopped": true,
+  "archive_SHA256": "4ce527a3ae458c69ccc68fec0f6fe7e053938d12ae120510d37fda550fbbf52e",
+  "archive_bytes": 2843922,
+  "memory": {
+    "worker": {
+      "first5min_median_KiB": 76620.0,
+      "last5min_median_KiB": 78300,
+      "growth_MiB": 1.640625
+    },
+    "NPU": {
+      "first5min_median_KiB": 36812.0,
+      "last5min_median_KiB": 34704,
+      "growth_MiB": -2.05859375
+    }
+  },
+  "samples": 117,
+  "PC_date": "2026-11-01",
+  "board_wall_clock_warning": "Board wall clock differs; boot identity and monotonic elapsed time used",
+  "raw_evidence": "pc_runs/final_submission_1h_20261101_v1/evidence.tar.gz"
+}

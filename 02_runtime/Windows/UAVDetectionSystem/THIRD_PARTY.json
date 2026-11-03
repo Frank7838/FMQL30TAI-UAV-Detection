@@ -1,0 +1,76 @@
+{
+  "Python": "3.12.10",
+  "libraries": [
+    {
+      "name": "altgraph",
+      "version": "0.17.5",
+      "role": "build only"
+    },
+    {
+      "name": "bcrypt",
+      "version": "5.0.0",
+      "role": "runtime"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "role": "runtime"
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.2",
+      "role": "runtime"
+    },
+    {
+      "name": "invoke",
+      "version": "3.0.3",
+      "role": "runtime"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "role": "build only"
+    },
+    {
+      "name": "paramiko",
+      "version": "5.1.0",
+      "role": "runtime"
+    },
+    {
+      "name": "pefile",
+      "version": "2024.8.26",
+      "role": "build only"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.11",
+      "role": "runtime"
+    },
+    {
+      "name": "pyinstaller",
+      "version": "6.22.3",
+      "role": "build only"
+    },
+    {
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.9",
+      "role": "build only"
+    },
+    {
+      "name": "PyNaCl",
+      "version": "1.6.2",
+      "role": "runtime"
+    },
+    {
+      "name": "pywin32-ctypes",
+      "version": "0.2.3",
+      "role": "build only"
+    },
+    {
+      "name": "setuptools",
+      "version": "84.2.1",
+      "role": "build only"
+    }
+  ],
+  "private_keys_included": false
+}

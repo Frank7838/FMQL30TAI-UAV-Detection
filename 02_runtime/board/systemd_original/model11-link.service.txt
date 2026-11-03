@@ -1,0 +1,13 @@
+# /etc/systemd/system/model11-link.service
+[Unit]
+Description=Model11 fixed wired application address after vendor network setup
+After=network.target network-online.target rc-local.service
+Before=model11-viewer.service model11-detect.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -B /root/fpga_gaming/model11_standalone_20261025_v1/ensure_network.py
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

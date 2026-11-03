@@ -1,0 +1,10 @@
+{
+  "host": "169.254.74.247",
+  "http_port": 8080,
+  "ssh_port": 22,
+  "username": "root",
+  "bind_address": "",
+  "key_file": "",
+  "host_fingerprint": ""
+}
+

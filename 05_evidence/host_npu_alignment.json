@@ -1,0 +1,10 @@
+{
+  "frames": 1629,
+  "Host_boxes": 1611,
+  "NPU_boxes": 1611,
+  "matched": 1611,
+  "median_IoU": 0.9999697894710197,
+  "max_confidence_difference": 4.869709014920787e-07,
+  "metrics_identical": true,
+  "new_forwards": 0
+}

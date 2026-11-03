@@ -1,0 +1,20 @@
+# /etc/systemd/system/model11-detect.service
+[Unit]
+Description=Model11 continuous camera NPU and PL alarm
+After=local-fs.target rc-local.service model11-link.service
+Requires=model11-link.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/fpga_gaming/model11_standalone_20261025_v1
+ExecStart=/usr/bin/python3 -B -u /root/fpga_gaming/model11_standalone_20261025_v1/run_camera.py
+Restart=no
+KillMode=process
+KillSignal=SIGTERM
+SendSIGKILL=no
+TimeoutStopSec=infinity
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

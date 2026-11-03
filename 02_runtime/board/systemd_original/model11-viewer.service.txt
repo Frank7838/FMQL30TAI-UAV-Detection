@@ -1,0 +1,17 @@
+# /etc/systemd/system/model11-viewer.service
+[Unit]
+Description=Model11 read-only LAN viewer
+After=model11-link.service
+Requires=model11-link.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/fpga_gaming/model11_standalone_20261025_v1
+ExecStart=/usr/bin/python3 -B -u /root/fpga_gaming/model11_standalone_20261025_v1/viewer.py --port 8080
+Restart=on-failure
+RestartSec=5
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

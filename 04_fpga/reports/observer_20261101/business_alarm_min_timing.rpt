@@ -1,0 +1,295 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Oct 26 11:53:11 2026
+| Host         : Mr-K running 64-bit major release  (build 9200)
+| Command      : report_timing -from [get_cells -hier -filter {NAME =~ business_alarm/*}] -to [get_cells -hier -filter {NAME =~ business_alarm/*}] -delay_type min -max_paths 5 -file D:/FPGA_Gaming/pc_runs/obs26_parent_v1/reports/business_alarm_min_timing.rpt
+| Design       : ai7030_edif_top
+| Device       : 7z030-ffg676
+| Speed File   : -2  PRODUCTION 1.11 2025-11-03
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.141ns  (arrival time - required time)
+  Source:                 business_alarm/observer/recover_cycles_reg[21]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            business_alarm/rdata_reg[21]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.212ns  (logic 0.128ns (60.480%)  route 0.084ns (39.520%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.240ns
+    Source Clock Delay      (SCD):    0.978ns
+    Clock Pessimism Removal (CPR):    0.251ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.316     0.316    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.026     0.342 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.605     0.947    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.213    -0.266 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.584     0.318    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.344 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.634     0.978    business_alarm/observer/CLK
+    SLICE_X95Y176        FDRE                                         r  business_alarm/observer/recover_cycles_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X95Y176        FDRE (Prop_fdre_C_Q)         0.100     1.078 r  business_alarm/observer/recover_cycles_reg[21]/Q
+                         net (fo=1, routed)           0.084     1.162    U0_ps_ai_peripheral/ps_ai_wrapper_u0/rdata[31]_i_4_0[16]
+    SLICE_X94Y176        LUT6 (Prop_lut6_I3_O)        0.028     1.190 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/rdata[21]_i_1__0/O
+                         net (fo=1, routed)           0.000     1.190    business_alarm/rdata_reg[31]_2[21]
+    SLICE_X94Y176        FDRE                                         r  business_alarm/rdata_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.350     0.350    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.030     0.380 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.817     1.197    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.496    -0.299 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.651     0.352    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     0.382 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.858     1.240    business_alarm/CLK
+    SLICE_X94Y176        FDRE                                         r  business_alarm/rdata_reg[21]/C
+                         clock pessimism             -0.251     0.989    
+    SLICE_X94Y176        FDRE (Hold_fdre_C_D)         0.060     1.049    business_alarm/rdata_reg[21]
+  -------------------------------------------------------------------
+                         required time                         -1.049    
+                         arrival time                           1.190    
+  -------------------------------------------------------------------
+                         slack                                  0.141    
+
+Slack (MET) :             0.141ns  (arrival time - required time)
+  Source:                 business_alarm/observer/recover_cycles_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            business_alarm/rdata_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.212ns  (logic 0.128ns (60.480%)  route 0.084ns (39.520%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.239ns
+    Source Clock Delay      (SCD):    0.977ns
+    Clock Pessimism Removal (CPR):    0.251ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.316     0.316    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.026     0.342 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.605     0.947    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.213    -0.266 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.584     0.318    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.344 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.633     0.977    business_alarm/observer/CLK
+    SLICE_X95Y174        FDRE                                         r  business_alarm/observer/recover_cycles_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X95Y174        FDRE (Prop_fdre_C_Q)         0.100     1.077 r  business_alarm/observer/recover_cycles_reg[13]/Q
+                         net (fo=1, routed)           0.084     1.161    U0_ps_ai_peripheral/ps_ai_wrapper_u0/rdata[31]_i_4_0[9]
+    SLICE_X94Y174        LUT6 (Prop_lut6_I3_O)        0.028     1.189 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/rdata[13]_i_1__0/O
+                         net (fo=1, routed)           0.000     1.189    business_alarm/rdata_reg[31]_2[13]
+    SLICE_X94Y174        FDRE                                         r  business_alarm/rdata_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.350     0.350    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.030     0.380 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.817     1.197    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.496    -0.299 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.651     0.352    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     0.382 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.857     1.239    business_alarm/CLK
+    SLICE_X94Y174        FDRE                                         r  business_alarm/rdata_reg[13]/C
+                         clock pessimism             -0.251     0.988    
+    SLICE_X94Y174        FDRE (Hold_fdre_C_D)         0.060     1.048    business_alarm/rdata_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.048    
+                         arrival time                           1.189    
+  -------------------------------------------------------------------
+                         slack                                  0.141    
+
+Slack (MET) :             0.144ns  (arrival time - required time)
+  Source:                 business_alarm/shadow_frame_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            business_alarm/pulse_frame_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.195ns  (logic 0.118ns (60.659%)  route 0.077ns (39.341%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.218ns
+    Source Clock Delay      (SCD):    0.956ns
+    Clock Pessimism Removal (CPR):    0.251ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.316     0.316    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.026     0.342 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.605     0.947    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.213    -0.266 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.584     0.318    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.344 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.612     0.956    business_alarm/CLK
+    SLICE_X90Y180        FDRE                                         r  business_alarm/shadow_frame_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X90Y180        FDRE (Prop_fdre_C_Q)         0.118     1.074 r  business_alarm/shadow_frame_reg[11]/Q
+                         net (fo=1, routed)           0.077     1.151    business_alarm/shadow_frame[11]
+    SLICE_X91Y180        FDRE                                         r  business_alarm/pulse_frame_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.350     0.350    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.030     0.380 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.817     1.197    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.496    -0.299 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.651     0.352    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     0.382 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.836     1.218    business_alarm/CLK
+    SLICE_X91Y180        FDRE                                         r  business_alarm/pulse_frame_reg[11]/C
+                         clock pessimism             -0.251     0.967    
+    SLICE_X91Y180        FDRE (Hold_fdre_C_D)         0.040     1.007    business_alarm/pulse_frame_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -1.007    
+                         arrival time                           1.151    
+  -------------------------------------------------------------------
+                         slack                                  0.144    
+
+Slack (MET) :             0.144ns  (arrival time - required time)
+  Source:                 business_alarm/shadow_frame_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            business_alarm/pulse_frame_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.195ns  (logic 0.118ns (60.659%)  route 0.077ns (39.341%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.220ns
+    Source Clock Delay      (SCD):    0.958ns
+    Clock Pessimism Removal (CPR):    0.251ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.316     0.316    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.026     0.342 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.605     0.947    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.213    -0.266 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.584     0.318    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.344 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.614     0.958    business_alarm/CLK
+    SLICE_X90Y182        FDRE                                         r  business_alarm/shadow_frame_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X90Y182        FDRE (Prop_fdre_C_Q)         0.118     1.076 r  business_alarm/shadow_frame_reg[12]/Q
+                         net (fo=1, routed)           0.077     1.153    business_alarm/shadow_frame[12]
+    SLICE_X91Y182        FDRE                                         r  business_alarm/pulse_frame_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.350     0.350    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.030     0.380 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.817     1.197    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.496    -0.299 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.651     0.352    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     0.382 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.838     1.220    business_alarm/CLK
+    SLICE_X91Y182        FDRE                                         r  business_alarm/pulse_frame_reg[12]/C
+                         clock pessimism             -0.251     0.969    
+    SLICE_X91Y182        FDRE (Hold_fdre_C_D)         0.040     1.009    business_alarm/pulse_frame_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -1.009    
+                         arrival time                           1.153    
+  -------------------------------------------------------------------
+                         slack                                  0.144    
+
+Slack (MET) :             0.150ns  (arrival time - required time)
+  Source:                 business_alarm/shadow_frame_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            business_alarm/pulse_frame_reg[22]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.194ns  (logic 0.100ns (51.581%)  route 0.094ns (48.419%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.012ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.219ns
+    Source Clock Delay      (SCD):    0.957ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.316     0.316    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.026     0.342 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.605     0.947    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.213    -0.266 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.584     0.318    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.344 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.613     0.957    business_alarm/CLK
+    SLICE_X89Y181        FDRE                                         r  business_alarm/shadow_frame_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X89Y181        FDRE (Prop_fdre_C_Q)         0.100     1.057 r  business_alarm/shadow_frame_reg[22]/Q
+                         net (fo=1, routed)           0.094     1.151    business_alarm/shadow_frame[22]
+    SLICE_X90Y181        FDRE                                         r  business_alarm/pulse_frame_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/FCLKCLK[0]
+                         net (fo=1, routed)           0.350     0.350    U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y22       BUFG (Prop_bufg_I_O)         0.030     0.380 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=1, routed)           0.817     1.197    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_in1
+    PLLE2_ADV_X0Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -1.496    -0.299 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.651     0.352    U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     0.382 r  U0_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/clkout1_buf/O
+                         net (fo=7616, routed)        0.837     1.219    business_alarm/CLK
+    SLICE_X90Y181        FDRE                                         r  business_alarm/pulse_frame_reg[22]/C
+                         clock pessimism             -0.250     0.969    
+    SLICE_X90Y181        FDRE (Hold_fdre_C_D)         0.032     1.001    business_alarm/pulse_frame_reg[22]
+  -------------------------------------------------------------------
+                         required time                         -1.001    
+                         arrival time                           1.151    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+
+
+

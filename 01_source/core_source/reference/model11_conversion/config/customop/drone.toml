@@ -1,0 +1,15 @@
+[DetPost]
+forward_dll = ""
+forward_so = ""
+quantized = true
+thr_f = 0.1
+cmp_en = 1
+groups = 3
+anchor_num = 1
+position = -1
+
+[ImageMake]
+forward_dll = ""
+forward_so = ""
+no_imkpad = 1
+quantized = true

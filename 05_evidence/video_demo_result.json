@@ -1,0 +1,25 @@
+{
+  "frames": 571,
+  "raw_boxes": 577,
+  "segments": [
+    {
+      "sequence": "V_DRONE_013",
+      "source_role": "Halmstad TRAIN",
+      "frames": 270,
+      "raw_boxes": 276,
+      "CPU_FPGA_exact": 270
+    },
+    {
+      "sequence": "V_DRONE_054",
+      "source_role": "Halmstad TRAIN",
+      "frames": 301,
+      "raw_boxes": 301,
+      "CPU_FPGA_exact": 301
+    }
+  ],
+  "source_fps": 30,
+  "playback_seconds": 19.033333333333335,
+  "CPU_FPGA_exact": 571,
+  "all_original_boxes_retained": true,
+  "scope": "已有TRAIN片源的板端推理展示；30 FPS为片源回放速度，不是处理吞吐，也不作为独立精度。"
+}

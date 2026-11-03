@@ -1,0 +1,9 @@
+//arch = fmql; split = false; format = BIN
+the_ROM_image:
+{
+ [bootloader, destination_device = ps]D:/FPGA_Gaming/vendor/fpga_reference/20260916/BOOT_Gen/FSBL251210_ddr400_demo.out
+ [destination_device = pl]D:/FPGA_Gaming/submission/model11_20261025_v1/04_fpga/current_converted.bit
+ [destination_cpu = apu_0, destination_device = ps]D:/FPGA_Gaming/vendor/fpga_reference/20260916/BOOT_Gen/bl31.elf
+ [destination_cpu = apu_0, destination_device = ps]D:/FPGA_Gaming/vendor/fpga_reference/20260916/BOOT_Gen/u-boot
+ [fsbl_config]apu_x32
+}

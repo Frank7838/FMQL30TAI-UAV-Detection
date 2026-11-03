@@ -1,0 +1,9 @@
+# 启动镜像构成
+
+candidate_boot_image.bif按厂商FSBL、转换后的FPGA位流、bl31和U-Boot顺序生成FMQL启动镜像，当前位流指向04_fpga/current_converted.bit。bootgen.tcl调用厂商create_boot_image；这些模板只生成电脑文件，不写卡、不下载。
+
+重建前先准备匹配的厂商父工程，在Vivado打开后执行apply_observer_overlay.tcl，接入src/pl中的告警、观察模块和LED接线。该脚本不启动综合或布线。工具补丁和原平台约束仍使用厂商工程配套版本。
+
+模板保留原构建路径；换电脑时修改厂商启动程序和输出路径。当前成品可以直接使用04_fpga/current_BOOT.bin，不必重新跑Vivado。
+
+历史父工程在pc_runs/pl25_parent_v1，当前观察模块工程在pc_runs/obs26_parent_v1；11月1日的导出、转换与上板证据在pc_runs/alarm_observability_20261101_v2。更换BOOT和实际上电仍由部署者确认并操作。

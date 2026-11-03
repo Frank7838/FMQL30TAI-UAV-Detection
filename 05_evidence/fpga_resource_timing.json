@@ -1,0 +1,57 @@
+{
+  "basis": "当前故障灯及硬件事件版本的已布线路由检查点",
+  "modules": {
+    "business_alarm": {
+      "LUT": 252,
+      "FF": 811,
+      "DSP": 0,
+      "BRAM_tiles": 0,
+      "internal_setup_slack_ns": 5.157,
+      "internal_hold_slack_ns": 0.141,
+      "clock_MHz": 100
+    },
+    "business_tick": {
+      "LUT": 18,
+      "FF": 19,
+      "DSP": 0,
+      "BRAM_tiles": 0,
+      "clock_MHz": 100,
+      "internal_setup_slack_ns": 8.083,
+      "internal_hold_slack_ns": 0.123
+    }
+  },
+  "totals": {
+    "LUT": 270,
+    "FF": 830,
+    "DSP": 0,
+    "BRAM_tiles": 0
+  },
+  "parent": {
+    "total_LUT": 40088,
+    "logic_LUT": 34380,
+    "LUTRAM": 5632,
+    "SRL": 76,
+    "FF": 54512,
+    "RAMB36": 151,
+    "RAMB18": 11,
+    "DSP": 8
+  },
+  "parent_timing": {
+    "WNS": 0.03,
+    "TNS": 0.0,
+    "setup_failing_endpoints": 0,
+    "WHS": 0.029,
+    "THS": 0.0,
+    "hold_failing_endpoints": 0,
+    "WPWS": -0.409,
+    "TPWS": -0.479,
+    "pulse_failing_endpoints": 2
+  },
+  "inherited_DRC": "REQP52 Error, REQP56 Error, REQP1933 Critical Warning",
+  "full_parent_signoff": false,
+  "reports": "04_fpga/reports/observer_20261101",
+  "previous_baseline_totals": {
+    "LUT": 165,
+    "FF": 340
+  }
+}

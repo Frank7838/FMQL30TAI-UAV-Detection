@@ -1,0 +1,302 @@
+{
+  "status": "COLD_BOOT_AND_BOUNDED_OBSERVER_BOARD_TEST_PASSED",
+  "boot": "5b448143-c433-457f-8cb2-cde4e3e31e14",
+  "camera": {
+    "frames": 2647,
+    "seconds": 90.1078222,
+    "FPS": 29.37591804321734,
+    "unknown": 0,
+    "all_CPU_FPGA_exact": true,
+    "SDK_closed": true
+  },
+  "directed": {
+    "register_writes": 55,
+    "NPU_calls": 0,
+    "business_reset_writes": 0,
+    "timeout_s": 0.99912612,
+    "events": [
+      {
+        "label": "initial",
+        "at_s": 0.000788880000015979,
+        "PL": {
+          "192": 2768568321,
+          "32": 7,
+          "36": 2650,
+          "40": 2647,
+          "44": 0,
+          "48": 0,
+          "52": 4
+        },
+        "hardware_observability": {
+          "supported": true,
+          "ready": true,
+          "clock_hz": 100000000,
+          "now_cycles": 38398167678,
+          "event_seq": 28,
+          "valid_mask": 15,
+          "last_mask": 4,
+          "events": {
+            "alarm_assert": {
+              "cycles": 11343374183,
+              "frame": 2522
+            },
+            "alarm_clear": {
+              "cycles": 11313362507,
+              "frame": 2513
+            },
+            "stream_fault": {
+              "cycles": 11870699999,
+              "frame": 2650
+            },
+            "stream_recover": {
+              "cycles": 2917574897,
+              "frame": 4
+            }
+          },
+          "epoch": "hardware business_reset; not UTC",
+          "record_scope": "latest occurrence per type; not a complete event log"
+        }
+      },
+      {
+        "label": "cleared_by_empty_frames",
+        "at_s": 0.004269280000016806,
+        "PL": {
+          "192": 2768568321,
+          "32": 2052,
+          "36": 2659,
+          "40": 2655,
+          "44": 0,
+          "48": 0,
+          "52": 0
+        },
+        "hardware_observability": {
+          "supported": true,
+          "ready": true,
+          "clock_hz": 100000000,
+          "now_cycles": 38398518846,
+          "event_seq": 30,
+          "valid_mask": 15,
+          "last_mask": 2,
+          "events": {
+            "alarm_assert": {
+              "cycles": 11343374183,
+              "frame": 2522
+            },
+            "alarm_clear": {
+              "cycles": 38398435425,
+              "frame": 2659
+            },
+            "stream_fault": {
+              "cycles": 11870699999,
+              "frame": 2650
+            },
+            "stream_recover": {
+              "cycles": 38398233600,
+              "frame": 2652
+            }
+          },
+          "epoch": "hardware business_reset; not UTC",
+          "record_scope": "latest occurrence per type; not a complete event log"
+        }
+      },
+      {
+        "label": "alarm_assert",
+        "at_s": 0.006760299999996278,
+        "PL": {
+          "192": 2768568321,
+          "32": 4149,
+          "36": 2662,
+          "40": 2658,
+          "44": 0,
+          "48": 0,
+          "52": 0
+        },
+        "hardware_observability": {
+          "supported": true,
+          "ready": true,
+          "clock_hz": 100000000,
+          "now_cycles": 38398768043,
+          "event_seq": 31,
+          "valid_mask": 15,
+          "last_mask": 1,
+          "events": {
+            "alarm_assert": {
+              "cycles": 38398687387,
+              "frame": 2662
+            },
+            "alarm_clear": {
+              "cycles": 38398435425,
+              "frame": 2659
+            },
+            "stream_fault": {
+              "cycles": 11870699999,
+              "frame": 2650
+            },
+            "stream_recover": {
+              "cycles": 38398233600,
+              "frame": 2652
+            }
+          },
+          "epoch": "hardware business_reset; not UTC",
+          "record_scope": "latest occurrence per type; not a complete event log"
+        }
+      },
+      {
+        "label": "no_submit_fault",
+        "at_s": 1.258665839999992,
+        "PL": {
+          "192": 2768568321,
+          "32": 7,
+          "36": 2662,
+          "40": 2658,
+          "44": 0,
+          "48": 0,
+          "52": 4
+        },
+        "hardware_observability": {
+          "supported": true,
+          "ready": true,
+          "clock_hz": 100000000,
+          "now_cycles": 38523958231,
+          "event_seq": 32,
+          "valid_mask": 15,
+          "last_mask": 4,
+          "events": {
+            "alarm_assert": {
+              "cycles": 38398687387,
+              "frame": 2662
+            },
+            "alarm_clear": {
+              "cycles": 38398435425,
+              "frame": 2659
+            },
+            "stream_fault": {
+              "cycles": 38498599999,
+              "frame": 2662
+            },
+            "stream_recover": {
+              "cycles": 38398233600,
+              "frame": 2652
+            }
+          },
+          "epoch": "hardware business_reset; not UTC",
+          "record_scope": "latest occurrence per type; not a complete event log"
+        }
+      },
+      {
+        "label": "result_stream_recovered",
+        "at_s": 2.0110188699999867,
+        "PL": {
+          "192": 2768568321,
+          "32": 4117,
+          "36": 2663,
+          "40": 2659,
+          "44": 0,
+          "48": 0,
+          "52": 0
+        },
+        "hardware_observability": {
+          "supported": true,
+          "ready": true,
+          "clock_hz": 100000000,
+          "now_cycles": 38599193565,
+          "event_seq": 33,
+          "valid_mask": 15,
+          "last_mask": 8,
+          "events": {
+            "alarm_assert": {
+              "cycles": 38398687387,
+              "frame": 2662
+            },
+            "alarm_clear": {
+              "cycles": 38398435425,
+              "frame": 2659
+            },
+            "stream_fault": {
+              "cycles": 38498599999,
+              "frame": 2662
+            },
+            "stream_recover": {
+              "cycles": 38599109802,
+              "frame": 2663
+            }
+          },
+          "epoch": "hardware business_reset; not UTC",
+          "record_scope": "latest occurrence per type; not a complete event log"
+        }
+      },
+      {
+        "label": "alarm_clear",
+        "at_s": 2.5143859099999872,
+        "PL": {
+          "192": 2768568321,
+          "32": 2052,
+          "36": 2671,
+          "40": 2667,
+          "44": 0,
+          "48": 0,
+          "52": 0
+        },
+        "hardware_observability": {
+          "supported": true,
+          "ready": true,
+          "clock_hz": 100000000,
+          "now_cycles": 38649530558,
+          "event_seq": 34,
+          "valid_mask": 15,
+          "last_mask": 2,
+          "events": {
+            "alarm_assert": {
+              "cycles": 38398687387,
+              "frame": 2662
+            },
+            "alarm_clear": {
+              "cycles": 38649449666,
+              "frame": 2671
+            },
+            "stream_fault": {
+              "cycles": 38498599999,
+              "frame": 2662
+            },
+            "stream_recover": {
+              "cycles": 38599109802,
+              "frame": 2663
+            }
+          },
+          "epoch": "hardware business_reset; not UTC",
+          "record_scope": "latest occurrence per type; not a complete event log"
+        }
+      }
+    ]
+  },
+  "human_LED": {
+    "answer": "现在LED1亮LED2灭，中间有部分时间看到同时亮，其他没注意",
+    "LED1_on_LED2_off_observed": true,
+    "both_on_observed": true,
+    "full_dynamic_sequence_observed": false
+  },
+  "detector_stopped": true,
+  "continuous_autostart_enabled": true,
+  "new_functions": [
+    "LED1结果超时指示",
+    "四类事件的硬件周期数与帧号"
+  ],
+  "acceleration_claim": false,
+  "resources": {
+    "LUT": 270,
+    "FF": 830,
+    "DSP": 0,
+    "BRAM_tiles": 0
+  },
+  "previous_bit_speedmode_run": {
+    "loop_seconds": 10473.21362365,
+    "NPU_calls": 312711,
+    "commits": 312671,
+    "unknown": 0,
+    "processing_fps": 29.858170685438353,
+    "device_closed": true
+  },
+  "previous_run_note": "当前SDK调度配置、上一版FPGA；312711次推理中有40次继承告警保持，未当作未知或有效空帧提交。",
+  "new_bit_long_run_performed": false,
+  "raw_evidence": "D:\\FPGA_Gaming\\pc_runs\\alarm_observability_20261101_v2\\coldboot_evidence.tar.gz"
+}

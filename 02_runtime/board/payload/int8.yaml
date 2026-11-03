@@ -1,0 +1,37 @@
+camera:
+  camerah: 1080
+  cameraw: 1920
+  do: false
+dataset:
+  dir: .
+  list: unused_camera_only.txt
+  names: drone.names
+  res: sessions
+imodel:
+  compressFtmp: false
+  cudamode: false
+  dir: model
+  dump_format: SFB
+  dump_output: false
+  ip: 127.0.0.1
+  log_path: sessions
+  mmuMode: true
+  ocm_option: -1
+  run_backend: zg330
+  save: false
+  show: false
+  speedmode: true
+  stage: g
+param:
+  anchors: []
+  conf: 0.25
+  fpga_nms: false
+  iou_thresh: 0.7
+  multilabel: false
+  number_of_class: 1
+  number_of_head: 3
+business_roi:
+- 8192
+- 4096
+- 57344
+- 57344

@@ -1,0 +1,34 @@
+# Local configuration and private keys
+.git/
+**/__pycache__/
+*.pyc
+*.pyo
+.venv/
+**/build_output/
+**/node_modules/
+**/.vs/
+**/bin/Debug/
+**/obj/
+*.user
+*.suo
+*.pem
+*.key
+id_rsa
+id_ed25519
+transfer_ed25519
+settings.local.json
+
+# Datasets and temporary recordings are supplied from their original sources
+datasets/
+**/datasets/
+**/images/train/
+**/images/val/
+**/labels/train/
+**/labels/val/
+raw_recordings/
+**/sessions/
+**/.Xil/
+*.jou
+
+# Keep expanded source in Git
+/01_source/*.zip

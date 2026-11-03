@@ -1,0 +1,120 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Oct 26 11:53:02 2026
+| Host         : Mr-K running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 3 -file D:/FPGA_Gaming/pc_runs/obs26_parent_v1/reports/utilization_hierarchical.rpt
+| Design       : ai7030_edif_top
+| Device       : 7z030ffg676-2
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------------------------------------------------------------------------+---------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
+|                                            Instance                                           |              Module             | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP48 Blocks |
++-----------------------------------------------------------------------------------------------+---------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
+| ai7030_edif_top                                                                               |                           (top) |      40088 |      34380 |    5632 |   76 | 54512 |    151 |     11 |            8 |
+|   (ai7030_edif_top)                                                                           |                           (top) |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|   U0_ps_ai_peripheral                                                                         |                ps_ai_peripheral |      38574 |      32903 |    5632 |   39 | 52376 |    151 |     10 |            2 |
+|     ZGolo                                                                                     |                         AI_Mate |      17730 |      13956 |    3772 |    2 | 33842 |     73 |      8 |            2 |
+|       (ZGolo)                                                                                 |                         AI_Mate |       8393 |       8392 |       0 |    1 | 18824 |      0 |      0 |            2 |
+|       u_AI_Mate_top/U0_ddr2hp_itcn                                                            |                     ddr2hp_itcn |       3280 |       2500 |     780 |    0 | 10038 |     64 |      8 |            0 |
+|       u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/af_fifo_u0                       |                         af_fifo |        681 |        153 |     528 |    0 |   265 |      0 |      0 |            0 |
+|       u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/data_prefetch_u0                 |                   data_prefetch |       2037 |       1509 |     528 |    0 |   633 |      0 |      0 |            0 |
+|       u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_ddr_ctrl_u0/app_fifo_post_u |                   app_fifo_post |         30 |         26 |       4 |    0 |    38 |      0 |      0 |            0 |
+|       u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/indx_fifo_u0        |                       indx_fifo |        348 |         92 |     256 |    0 |   146 |      0 |      0 |            0 |
+|       u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/rddr_ar_u0          |                       rddr_fifo |         48 |         24 |      24 |    0 |    90 |      0 |      0 |            0 |
+|       u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0        |                       sync_fifo |        496 |        144 |     352 |    0 |   284 |      0 |      0 |            0 |
+|       u_AI_Mate_top/buyi_icore_post_top_u0/post_info_fifo_u0                                  |                  post_info_fifo |         42 |         30 |      12 |    0 |    46 |      0 |      0 |            0 |
+|       u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK                                             |                  AI_CORE_CLK_ST |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|       u_AI_Mate_top/ddr_ritcn_u0/mna_idfifo_u0                                                |                      mna_idfifo |        190 |         94 |      96 |    0 |    73 |      0 |      0 |            0 |
+|       u_AI_Mate_top/ddr_witcn_u0/mna_idfifo_w5_u0                                             |                   mna_idfifo_w5 |        226 |         98 |     128 |    0 |    75 |      0 |      0 |            0 |
+|       u_AI_Mate_top/image_make_top_u0/collecting_fifo_u0/w616d64_fifo_u0                      |              w616d64_fifo_HD163 |         39 |         39 |       0 |    0 |   652 |      9 |      0 |            0 |
+|       u_AI_Mate_top/u0_ddr64_wrapper                                                          |                   ddr64_wrapper |        880 |        196 |     684 |    0 |  1126 |      0 |      0 |            0 |
+|       u_AI_Mate_top/u_axi_2to1                                                                |                        axi_2to1 |        744 |        491 |     252 |    1 |  1296 |      0 |      0 |            0 |
+|       u_AI_Mate_top/u_ps_ai_io/u_gp0_io/axi_to_mna_u0/bid_fifo                                |                  mna_idfifo_w12 |         75 |         43 |      32 |    0 |    64 |      0 |      0 |            0 |
+|       u_AI_Mate_top/u_ps_ai_io/u_gp0_io/axi_to_mna_u0/rid_fifo                                |            mna_idfifo_w12_HD198 |         75 |         43 |      32 |    0 |    64 |      0 |      0 |            0 |
+|       u_AI_Mate_top/u_ps_ai_io/u_gp1_io/axi_to_mna_u0/bid_fifo                                |            mna_idfifo_w12_HD213 |         75 |         43 |      32 |    0 |    64 |      0 |      0 |            0 |
+|       u_AI_Mate_top/u_ps_ai_io/u_gp1_io/axi_to_mna_u0/rid_fifo                                |            mna_idfifo_w12_HD228 |         75 |         43 |      32 |    0 |    64 |      0 |      0 |            0 |
+|     a2sync_reset_cam0_clk                                                                     |             async_to_sync_reset |          5 |          5 |       0 |    0 |     4 |      0 |      0 |            0 |
+|     business_reset_u                                                                          |             business_reset_sync |          3 |          3 |       0 |    0 |     2 |      0 |      0 |            0 |
+|     frame_to_ps_inst0                                                                         |            frame_to_ps_largebuf |       1524 |       1516 |       4 |    4 |  1907 |     74 |      2 |            0 |
+|       (frame_to_ps_inst0)                                                                     |            frame_to_ps_largebuf |          1 |          1 |       0 |    0 |   132 |      0 |      0 |            0 |
+|       bridge_s_u1                                                                             |                      bridge_s_5 |          1 |          1 |       0 |    0 |     6 |      0 |      0 |            0 |
+|       cmos_clkgen_742_5_u0                                                                    |               cmos_clkgen_742_5 |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|       cmos_resize_24bit_u0                                                                    |            cmos_resize_24bit__2 |        227 |        227 |       0 |    0 |   116 |      0 |      0 |            0 |
+|       cmos_write_req_gen_m0                                                                   |              cmos_write_req_gen |         65 |         61 |       4 |    0 |   168 |      0 |      0 |            0 |
+|       color_bar_m0                                                                            |                       color_bar |         37 |         37 |       0 |    0 |    31 |      0 |      0 |            0 |
+|       frame_read_write_m0                                                                     |       frame_read_write_largebuf |        660 |        656 |       0 |    4 |   911 |     74 |      2 |            0 |
+|       level_cross_u0                                                                          |                   level_cross_6 |          1 |          1 |       0 |    0 |     5 |      0 |      0 |            0 |
+|       level_cross_u1                                                                          |                   level_cross_7 |          1 |          1 |       0 |    0 |     5 |      0 |      0 |            0 |
+|       level_cross_u2                                                                          |                   level_cross_8 |          0 |          0 |       0 |    0 |     5 |      0 |      0 |            0 |
+|       level_cross_u3                                                                          |                   level_cross_9 |          1 |          1 |       0 |    0 |     5 |      0 |      0 |            0 |
+|       rgb888_2_yuv422_u0                                                                      |                 rgb888_2_yuv422 |        114 |        114 |       0 |    0 |   176 |      0 |      0 |            0 |
+|       u_aq_axi_master                                                                         |                   aq_axi_master |        221 |        221 |       0 |    0 |   167 |      0 |      0 |            0 |
+|       uihdmitx_inst                                                                           |                        uihdmitx |        131 |        131 |       0 |    0 |   122 |      0 |      0 |            0 |
+|       video_rect_read_data_m0                                                                 |            video_rect_read_data |         65 |         65 |       0 |    0 |    58 |      0 |      0 |            0 |
+|     frame_trans_inst0                                                                         |                     frame_trans |        794 |        792 |       0 |    2 |  1360 |      3 |      0 |            0 |
+|       (frame_trans_inst0)                                                                     |                     frame_trans |         22 |         22 |       0 |    0 |     1 |      0 |      0 |            0 |
+|       add_frame_cnt_u0                                                                        |                   add_frame_cnt |         40 |         40 |       0 |    0 |    68 |      0 |      0 |            0 |
+|       axis_master_inst                                                                        |                     axis_master |         84 |         82 |       0 |    2 |   240 |      3 |      0 |            0 |
+|       cmos_resize_24bit_u0                                                                    |               cmos_resize_24bit |        128 |        128 |       0 |    0 |   119 |      0 |      0 |            0 |
+|       frame_ctrl_u0                                                                           |                      frame_ctrl |        520 |        520 |       0 |    0 |   932 |      0 |      0 |            0 |
+|     mig_ddr3_u0                                                                               |                   mig_7series_0 |      11352 |       9648 |    1684 |   20 |  7890 |      1 |      0 |            0 |
+|       (mig_ddr3_u0)                                                                           |                   mig_7series_0 |        496 |          0 |     496 |    0 |     0 |      0 |      0 |            0 |
+|       u_mig_7series_0_mig                                                                     | mig_7series_0_mig_7series_0_mig |      10856 |       9648 |    1188 |   20 |  7890 |      1 |      0 |            0 |
+|     p1_subsystem_u                                                                            |                    p1_subsystem |       3482 |       3437 |      44 |    1 |  3325 |      0 |      0 |            0 |
+|       (p1_subsystem_u)                                                                        |                    p1_subsystem |         77 |         76 |       0 |    1 |    30 |      0 |      0 |            0 |
+|       arbiter                                                                                 |           p1_axi3_owner_arbiter |        113 |        113 |       0 |    0 |   212 |      0 |      0 |            0 |
+|       control                                                                                 |                   p1_gp_control |        524 |        524 |       0 |    0 |  1883 |      0 |      0 |            0 |
+|       core                                                                                    |                   p1_p2_dma_mux |       2771 |       2727 |      44 |    0 |  1200 |      0 |      0 |            0 |
+|     ps_ai_wrapper_u0                                                                          |                   ps_ai_wrapper |       2921 |       2911 |       0 |   10 |  3576 |      0 |      0 |            0 |
+|       (ps_ai_wrapper_u0)                                                                      |                   ps_ai_wrapper |        554 |        554 |       0 |    0 |     0 |      0 |      0 |            0 |
+|       clk_wiz_0_inst                                                                          |                       clk_wiz_0 |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|       ps_ai_i                                                                                 |                           ps_ai |       2368 |       2358 |       0 |   10 |  3576 |      0 |      0 |            0 |
+|     u_ai_ra_RFU                                                                               |         gpx_RFU__parameterized0 |          3 |          3 |       0 |    0 |     1 |      0 |      0 |            0 |
+|     u_demo_clkrst_wrapper                                                                     |             demo_clkrst_wrapper |          4 |          4 |       0 |    0 |     4 |      0 |      0 |            0 |
+|     u_gp0_io                                                                                  |                           gp_io |        361 |        297 |      64 |    0 |   194 |      0 |      0 |            0 |
+|       axi_to_mna_u0                                                                           |           axi_to_mna__xdcDup__1 |        151 |         87 |      64 |    0 |   128 |      0 |      0 |            0 |
+|       gpx_std2ww_u0                                                                           |                      gpx_std2ww |        210 |        210 |       0 |    0 |    66 |      0 |      0 |            0 |
+|     u_gp0_manager                                                                             |                     gp0_manager |          1 |          1 |       0 |    0 |     4 |      0 |      0 |            0 |
+|       gpx_ww_split_u0                                                                         |                    gpx_ww_split |          1 |          1 |       0 |    0 |     2 |      0 |      0 |            0 |
+|       gpx_ww_split_u1                                                                         |    gpx_ww_split__parameterized0 |          0 |          0 |       0 |    0 |     1 |      0 |      0 |            0 |
+|       gpx_ww_split_u2                                                                         |    gpx_ww_split__parameterized1 |          0 |          0 |       0 |    0 |     1 |      0 |      0 |            0 |
+|     u_gp1_io                                                                                  |           gp_io__parameterized0 |        206 |        142 |      64 |    0 |   194 |      0 |      0 |            0 |
+|       axi_to_mna_u0                                                                           |                      axi_to_mna |        152 |         88 |      64 |    0 |   128 |      0 |      0 |            0 |
+|       gpx_std2ww_u0                                                                           |      gpx_std2ww__parameterized0 |         54 |         54 |       0 |    0 |    66 |      0 |      0 |            0 |
+|     u_host_ctrl_RFU                                                                           |                         gpx_RFU |          0 |          0 |       0 |    0 |     1 |      0 |      0 |            0 |
+|     u_vtc                                                                                     |                             vtc |        307 |        307 |       0 |    0 |    72 |      0 |      0 |            0 |
+|   business_alarm                                                                              |          region_alarm_regs_m505 |        252 |        252 |       0 |    0 |   811 |      0 |      0 |            0 |
+|     (business_alarm)                                                                          |          region_alarm_regs_m505 |         10 |         10 |       0 |    0 |   196 |      0 |      0 |            0 |
+|     core                                                                                      |               region_alarm_core |        107 |        107 |       0 |    0 |   127 |      0 |      0 |            0 |
+|     observer                                                                                  |                  alarm_observer |        135 |        135 |       0 |    0 |   488 |      0 |      0 |            0 |
+|   business_tick                                                                               |                 alarm_tick_100m |         18 |         18 |       0 |    0 |    19 |      0 |      0 |            0 |
+|   rx_sdi_inst                                                                                 |                          rx_sdi |       1246 |       1209 |       0 |   37 |  1306 |      0 |      1 |            6 |
+|     (rx_sdi_inst)                                                                             |                          rx_sdi |         21 |         21 |       0 |    0 |    28 |      0 |      0 |            0 |
+|     SDI0                                                                                      |                     k7_sdi_rxtx |       1029 |       1010 |       0 |   19 |  1119 |      0 |      1 |            0 |
+|       (SDI0)                                                                                  |                     k7_sdi_rxtx |          5 |          5 |       0 |    0 |     3 |      0 |      0 |            0 |
+|       SDI                                                                                     |               x7gtx_sdi_wrapper |        847 |        828 |       0 |   19 |   982 |      0 |      0 |            0 |
+|       VIDGEN                                                                                  |                      multigenHD |        177 |        177 |       0 |    0 |   134 |      0 |      1 |            0 |
+|     YCbCr422_2_RGB888_u0                                                                      |               YCbCr422_2_RGB888 |        166 |        164 |       0 |    2 |    96 |      0 |      0 |            6 |
+|       YCbCr422_2_YCbCr444_u                                                                   |             YCbCr422_2_YCbCr444 |         53 |         53 |       0 |    0 |    18 |      0 |      0 |            0 |
+|       YCbCr444_2_RGB888_u                                                                     |               YCbCr444_2_RGB888 |        113 |        111 |       0 |    2 |    78 |      0 |      0 |            6 |
+|     frame_convertor_u0                                                                        |                 frame_convertor |         21 |         12 |       0 |    9 |    59 |      0 |      0 |            0 |
+|     gtxe2_common_0                                                                            |        k7gtx_sdi_wrapper_common |          9 |          2 |       0 |    7 |     4 |      0 |      0 |            0 |
+|     mgtclk_inst0                                                                              |                          mgtclk |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|       inst                                                                                    |           mgtclk_mgtclk_clk_wiz |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|     sys_clk_inst0                                                                             |                         sys_clk |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|       inst                                                                                    |         sys_clk_sys_clk_clk_wiz |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
++-----------------------------------------------------------------------------------------------+---------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

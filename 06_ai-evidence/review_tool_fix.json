@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-23T15:09:42.755508+08:00",
+  "reported": "User opens HTML and annotation area is blank",
+  "root_cause": "24 UNKNOWN/partial drafts have draft_boxes=null; startup mapped all72 with f.draft_boxes.map, throwing at first null before dropdown/image initialization. JS syntax check cannot catch data-dependent runtime null dereference.",
+  "fix": "Normalize missing/null draft boxes to an empty editable array only inside review tool; original draft_state/truthnull/unknown preserved, not converted to negative. Add visible runtime error notice.",
+  "browser_UI_verification": "File URL browser observation rejected by browser security policy; no workaround/alternate browser route attempted. File-level bug diagnosis and data regression instead.",
+  "original_images_drafts_and_pending_human_records_modified": false,
+  "new_annotation_or_model_pass": false
+}

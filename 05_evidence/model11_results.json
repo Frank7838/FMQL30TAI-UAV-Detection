@@ -1,0 +1,55 @@
+{
+  "model": "模型11",
+  "dataset_role": "已曝光DEV，用于开发和部署核验",
+  "images": 1629,
+  "GT": 1609,
+  "matching_IoU": 0.5,
+  "confidence": 0.25,
+  "NMS_IoU": 0.7,
+  "FP32": {
+    "TP": 1546,
+    "FP": 82,
+    "FN": 63,
+    "P": 0.9496314496314496,
+    "R": 0.9608452454940957,
+    "F1": 0.955205437133148,
+    "frames": 1629,
+    "known_frames": 1629,
+    "unknown_frames": 0,
+    "GT": 1609,
+    "negative_frames": 37,
+    "negative_false_alarm_frames": 4,
+    "negative_false_alarm_rate": 0.10810810810810811,
+    "presence": {
+      "TP": 1552,
+      "FP": 4,
+      "FN": 40,
+      "P": 0.9974293059125964,
+      "R": 0.9748743718592965,
+      "F1": 0.9860228716645489
+    }
+  },
+  "NPU_INT8": {
+    "TP": 1541,
+    "FP": 70,
+    "FN": 68,
+    "P": 0.9565487274984482,
+    "R": 0.9577377252952144,
+    "F1": 0.9571428571428572,
+    "frames": 1629,
+    "known_frames": 1629,
+    "unknown_frames": 0,
+    "GT": 1609,
+    "negative_frames": 37,
+    "negative_false_alarm_frames": 3,
+    "negative_false_alarm_rate": 0.08108108108108109,
+    "presence": {
+      "TP": 1545,
+      "FP": 3,
+      "FN": 47,
+      "P": 0.998062015503876,
+      "R": 0.9704773869346733,
+      "F1": 0.9840764331210191
+    }
+  }
+}

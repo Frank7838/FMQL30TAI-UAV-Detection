@@ -1,0 +1,61 @@
+{
+  "gates": {
+    "raw_high_DRC_equal": true,
+    "no_new_project_setup_or_hold": true,
+    "no_new_CDC_or_only_identical_preexisting_endpoint": true,
+    "observer_local_previous_route_passed": true
+  },
+  "review_passed": true,
+  "baseline_CDC_rows": 20313,
+  "observer_CDC_rows": 20319,
+  "critical_added": [
+    [
+      "rx_sdi_inst/SDI0/SDI/GTX_i/gtxe2_i/RXOUTCLK",
+      "clk_pll_i",
+      "CDC-7",
+      "Critical",
+      "U0_ps_ai_peripheral/frame_to_ps_inst0/level_cross_u0/a1_clk1_d2_reg/CLR"
+    ],
+    [
+      "clk_pll_i",
+      "rx_sdi_inst/SDI0/SDI/GTX_i/gtxe2_i/RXOUTCLK",
+      "CDC-7",
+      "Critical",
+      "U0_ps_ai_peripheral/frame_to_ps_inst0/level_cross_u0/a1_clk1_d2_reg/CLR"
+    ]
+  ],
+  "critical_removed": [],
+  "exact_vendor_reset_cone_equal": true,
+  "raw_difference": "Only get_clocks collection order is reversed; each clock remains present",
+  "added_records_classification": "Identical pre-existing vendor reset cone, clocks and pin connections; retained vendor CDC limitation, not newly introduced logic",
+  "raw_high_DRC": {
+    "REQP-52#1": {
+      "severity": "Error",
+      "body": "connects_GTGREFCLK_ACTIVE GTXE2_CHANNEL cell rx_sdi_inst/SDI0/SDI/GTX_i/gtxe2_i: Use of the GTGREFCLK is reserved for test purposes only. This has the lowest performance of the available clocking methods and can degrade transceiver performance. Note that GTGREFCLK use may be caused by driving a REFCLK with a BUFG. Related violations: <none>"
+    },
+    "REQP-56#1": {
+      "severity": "Error",
+      "body": "connects_GTGREFCLK_ACTIVE GTXE2_COMMON cell rx_sdi_inst/gtxe2_common_0/gtxe2_common_i: Use of the GTGREFCLK is reserved for test purposes only. This has the lowest performance of the available clocking methods and can degrade transceiver performance. Note that GTGREFCLK use may be caused by driving a REFCLK with a BUFG. Related violations: <none>"
+    },
+    "REQP-1933#1": {
+      "severity": "Critical Warning",
+      "body": "connects_I_driver_BUFH The BUFGCTRL rx_sdi_inst/camera_clock_mux I1 pin should not be driven by a BUFH (rx_sdi_inst/camera_rx_spine) or else must be properly floorplanned. This connection is not routable in some cases. Related violations: <none>"
+    }
+  },
+  "timing": {
+    "WNS": 0.03,
+    "TNS": 0.0,
+    "setup_failing_endpoints": 0,
+    "WHS": 0.029,
+    "THS": 0.0,
+    "hold_failing_endpoints": 0,
+    "WPWS": -0.409,
+    "TPWS": -0.479,
+    "pulse_failing_endpoints": 2
+  },
+  "candidate_DCP": "D:\\FPGA_Gaming\\pc_runs\\obs26_parent_v1\\native_reset_physical_fix_v1\\p2_parent_routed.dcp",
+  "parent_rebuild_required": false,
+  "not_full_vendor_signoff": true,
+  "bitstream_generated": false,
+  "board_changed": false
+}

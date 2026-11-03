@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-01",
+  "model": "11 unchanged",
+  "change": "ZG330 speedmode=true; retain ETM option and all detector thresholds",
+  "fixed_input_comparison": {
+    "role": "pre-existing TRAIN qualification images",
+    "images": 40,
+    "warmup": 4,
+    "SDK_loads": 3,
+    "total_forwards": 132,
+    "baseline_forward_mean_ms": 24.357196,
+    "candidate_forward_mean_ms": 11.2419465,
+    "reverse_baseline_mean_ms": 23.9878445,
+    "exact_detection_bytes_match": true,
+    "measured_detections_per_40": 39,
+    "accuracy_evaluation": false
+  },
+  "camera_timing": {
+    "seconds_each": 20,
+    "exclude_first_frames": 60,
+    "baseline_steady_fps": 26.139109760064258,
+    "candidate_steady_fps": 29.9779118523231,
+    "baseline_receive_to_result_mean_ms": 53.84415011682243,
+    "candidate_receive_to_result_mean_ms": 24.50589827309237,
+    "scope": "Sequential live camera observations; includes old float rounding fault before correction"
+  },
+  "numeric_fix": {
+    "problem": "float32 x and width can sum to 640.000015, falsely rejecting an image-edge box",
+    "scope": "Q16 conversion only; original detections and scores unchanged",
+    "recorded_frames_replayed": 1046,
+    "previously_valid_frames_unchanged": 922,
+    "rounding_fault_frames_corrected": 124,
+    "invalid_cases_rejected": 6
+  },
+  "corrected_camera": {
+    "seconds": 30.08673528,
+    "NPU_calls": 859,
+    "FPGA_commits": 859,
+    "unknown": 0,
+    "device_closed": true,
+    "average_fps_including_camera_start_wait": 28.550787980343397
+  },
+  "FPGA": {
+    "bitstream_changed": false,
+    "alarm_rules_changed": false,
+    "pixel_preprocess_used": false,
+    "input_probe": "Applied NPU input is SDK ETM allocation; direct reuse by existing pixel module not established",
+    "new_compute_acceleration_proven": false
+  },
+  "deployed": true,
+  "long_run_for_updated_software_completed": false,
+  "raw_record_index": "D:/FPGA_Gaming/pc_runs/handoff_accel_20261101_v1"
+}

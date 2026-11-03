@@ -1,0 +1,48 @@
+[parse]
+net_name = "drone11n"
+framework = "onnx"
+inputs = [1, 640, 640, 3]
+inputs_layout = "NHWC"
+inputs_dtype = "UINT8"
+pre_method = "nop"
+pre_scale = [255.0, 255.0, 255.0]
+pre_mean = [0.0, 0.0, 0.0]
+channel_swap = [0, 1, 2]
+image_channel_order = "rgb"
+network = "fmodel/drone_yolo11n_raw_heads.onnx"
+jr_path = "../3_deploy/imodel/ZG/int8/"
+target = "zhuge"
+
+[optimize]
+target = "zhuge"
+json = "../3_deploy/imodel/ZG/int8/drone11n_parsed.json"
+raw = "../3_deploy/imodel/ZG/int8/drone11n_parsed.raw"
+jr_path = "../3_deploy/imodel/ZG/int8/"
+
+[quantize]
+forward_mode = "image"
+saturation = "kld"
+forward_dir = "./qtset/drone"
+forward_list = "./qtset/drone.txt"
+batch = 1
+qdtype = "int8"
+json = "../3_deploy/imodel/ZG/int8/drone11n_optimized.json"
+raw = "../3_deploy/imodel/ZG/int8/drone11n_optimized.raw"
+jr_path = "../3_deploy/imodel/ZG/int8/"
+per = "channel"
+target = "zhuge"
+no_transinput = true
+
+[adapt]
+target = "zhuge"
+json = "../3_deploy/imodel/ZG/int8/drone11n_quantized.json"
+raw = "../3_deploy/imodel/ZG/int8/drone11n_quantized.raw"
+jr_path = "../3_deploy/imodel/ZG/int8/"
+pass_on = "customop.DetPostZGPass"
+custom_config = "config/customop/drone.toml"
+
+[generate]
+json = "../3_deploy/imodel/ZG/int8/drone11n_adapted.json"
+raw = "../3_deploy/imodel/ZG/int8/drone11n_adapted.raw"
+jr_path = "../3_deploy/imodel/ZG/int8/"
+log_path = "./logs/"
